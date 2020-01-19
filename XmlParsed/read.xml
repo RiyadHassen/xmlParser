@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <houses>
+        <house id ="1"> Lannister</house>
+        <house id ="2"> Startk</house>
+        <house id ="3"> Grey</house>
+        <house id ="4"> Tarfaren</house>
+        <house id ="5"> Tyrell</house>
+        <house id="6">Arryn</house>
+        <house id="7">Martell</house>
+        <house id="8">Baratheon</house>
+        <house id="9">Frey</house>
+        <house id="10">Bolton</house>
+        <house id="11">Florent</house>
+        <house id ="12">Tully</house>
+    </houses>
+    <swords>
+        <sword  owner="Joffery Lanister"> Widows Wail</sword>
+        <sword  owner="Array Stark"> Neddle</sword>
+        <sword owner="Brienne of Tarth"> Oathkeeper</sword>
+        <sword owner="Samuel Trly">Hearthsbane</sword>
+        <sword owner="Eddard Stark">Ice</sword>
+        <sword owner="Jon Snow"> Logclaw</sword>
+    </swords>
+</root>

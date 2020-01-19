@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<paintings>
+    <painting>
+        <title> Boardwalk 5</title>
+        <artise> Arine Palmer</artise>
+        <image> ap1.jpg</image>
+        <price>850 </price>
+    </painting>
+     <painting>
+        <title> Boardwalk 5</title>
+        <artise> Arine Palmer</artise>
+        <image> ap1.jpg</image>
+        <price>850 </price>
+    </painting>
+</paintings>

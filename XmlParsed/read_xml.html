@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xml reader</title>
+
+</head>
+<body>
+    <main>
+        <ul id="swords"></ul>
+        <ul id="houses"></ul>
+        <pre id="output"></pre>
+
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            let url ="read.xml";
+            fetch(url)
+            .then(response=>response.text())
+            .then(data=>{
+                //console.log(data);
+                let parser = new DOMParser();
+                let xml = parser.parseFromString(data,"application/xml");
+                document.getElementById('output').textContent = data;
+                buildHouseList(xml);
+                buildSword(xml);
+            });
+        });
+        function buildHouseList(x) {
+            let list= document.getElementById('houses');
+            let houses = x.getElementsByTagName('house');
+            for (let i=0; i < houses.length; i++)
+            {
+                let li = document.createElement('li');
+                let house = houses[i].firstChild.nodeValue;
+                li.textContent=house;
+                list.appendChild(li)
+            }
+        }
+        function buildSword(x) {
+            let list= document.getElementById('swords');
+            let swords = x.getElementsByTagName('sword');
+            for (let i=0; i < swords.length; i++)
+            {
+                let li = document.createElement('li');
+                let swordName = swords[i].firstChild.nodeValue;
+                let personName = swords[i].getAttribute('owner');
+                li.textContent=`${swordName} - ${personName}`;
+                list.appendChild(li)
+            }
+        }
+    </script>
+</body>
+</html>
